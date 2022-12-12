@@ -1,0 +1,52 @@
+{% set wrapper_attributes = form.wrapper['#attributes'] %}
+
+{% if form.step_id['#value'] != 8  %}
+  <aside style="width: 30%;padding-left: 15px;margin-left: 15px;float: right;">
+      {% include '@amapceo_radar/progress-bar.html.twig' %}
+  </aside>
+{% endif %}
+
+<div id="{{ wrapper_attributes.id }}" data-drupal-selector="{{wrapper_attributes['data-drupal-selector']}}">
+
+  {% if form.step_id['#value'] == 1 %}
+
+    {% include '@amapceo_radar/member-information.html.twig' %}
+
+  {% elseif form.step_id['#value'] == 2 %}
+
+    {% include '@amapceo_radar/filed-dispute.html.twig' %}
+
+  {% elseif form.step_id['#value'] == 3 %}
+
+    {% include '@amapceo_radar/contact-record.html.twig' %}
+
+  {% elseif form.step_id['#value'] == 4 %}
+
+    {% include '@amapceo_radar/workplace-information.html.twig' %}
+
+  {% elseif form.step_id['#value'] == 5 %}
+
+    {% include '@amapceo_radar/job-classification.html.twig' %}
+
+  {% elseif form.step_id['#value'] == 6 %}
+
+    {% include '@amapceo_radar/classification-summary.html.twig' %}
+
+  {% elseif form.step_id['#value'] == 7 %}
+
+    {% include '@amapceo_radar/topics-of-concern.html.twig' %}
+
+  {% else %}
+
+  <h2>You have completed the wizard, yeah!</h2>
+
+  {% endif %}
+
+  {{ form.wrapper.actions|without('step') }}
+
+</div>
+
+{{ form.form_build_id }}
+{{ form.form_token }}
+{{ form.form_id }}
+{{ form.actions }}

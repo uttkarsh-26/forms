@@ -1,0 +1,22 @@
+<form id="{{ form['#id']}}" method="{{ form['#method'] }}">
+
+{{ form.type_of_issue_fieldset.dispute_type }}
+{{ form.type_of_issue_fieldset.individual_group }}
+
+<span class="For-these-disputes">
+  {% trans %}For these disputes, contact AMAPCEO Staff{% endtrans %}
+</span>
+</br>
+<span class="If-your-dispute-invo">
+  {% trans %}If your dispute involves either Benefits or Surplussing/Job Security,please contact a workplace advisordirectly at:{% endtrans %}</br>
+  {% trans %}416-595-9000 or 1-800-262-7236{% endtrans %}
+</span>
+
+{{ form.form_build_id }}
+{{ form.form_token }}
+{{ form.form_id }}
+
+{{ form.type_of_issue_fieldset.actions }}
+
+{{ form.actions }}
+</form>

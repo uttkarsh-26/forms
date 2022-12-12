@@ -1,0 +1,21 @@
+amapceo_radar.entry_level_form:
+  path: '/radar/start_dispute'
+  defaults:
+    _title: 'Report a Workplace Issue'
+    _controller: '\Drupal\amapceo_radar\Controller\EntryLevelFormController::renderForm'
+  requirements:
+    _radar_forms_access_check: 'TRUE'
+amapceo_radar.dispute_form:
+  path: '/radar/submit_dispute'
+  defaults:
+    _title: 'Report a Workplace Issue'
+    _controller: '\Drupal\amapceo_radar\Controller\DisputeFormController::renderForm'
+  requirements:
+    _radar_forms_access_check: 'TRUE'
+amapceo_radar.dispute_management_form:
+  path: '/radar/manage_dispute'
+  defaults:
+    _title: 'Report a Workplace Issue'
+    _controller: '\Drupal\amapceo_radar\Controller\ManageDisputeFormController::renderForm'
+  requirements:
+    _radar_forms_access_check: 'TRUE'

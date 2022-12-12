@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function amapceo_radar_theme($existing, $type, $theme, $path) {
+  // This is somehow not discoverable, maybe the whole file.
+  return [
+    'entry_level_form_member' => [
+      'variables' => [
+        'form' => NULL,
+      ],
+    ],
+    'entry_level_form_wpr' => [
+      'variables' => [
+        'form' => NULL,
+      ],
+    ],
+    'classification_dispute' => [
+      'render element' => 'form',
+    ],
+    'non_classification_dispute' => [
+      'render element' => 'form',
+    ],
+    'dispute_form' => [
+      'variables' => [
+        'form' => NULL,
+      ],
+    ],
+  ];
+
+}

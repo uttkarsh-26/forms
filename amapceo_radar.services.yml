@@ -1,0 +1,5 @@
+services:
+  amapceo_radar.radar_forms_access_check:
+    class: Drupal\amapceo_radar\Access\RadarFormsAccessCheck
+    tags:
+      - { name: access_check, applies_to: _radar_forms_access_check }

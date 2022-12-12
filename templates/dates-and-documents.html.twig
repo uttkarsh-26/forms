@@ -1,0 +1,24 @@
+{{ form.wrapper.dates_and_documents_fieldset['#prefix']|raw }}
+  <fieldset id="{{ form.wrapper.dates_and_documents_fieldset['#id'] }}">
+    <legend class="m-form-fieldset__legend">{{ form.wrapper.dates_and_documents_fieldset['#title'] }}</legend>
+    {{ form.wrapper.dates_and_documents_fieldset.incident_date_repetitive }}
+    <div class="dispute-info hidden" data-dispute-info="incident_date_repetitive">
+      <p>{% trans %}If the situation triggering this dispute occurred over time, please enter the most recent instance in the date field below.{% endtrans %}</p>
+    </div>
+    {{ form.wrapper.dates_and_documents_fieldset.incident_date }}
+    <div class="dispute-info hidden" data-dispute-info="incident_date">
+      <p>{% trans %}The date the incident took place or the latest date if it is ongoing or repetitive.{% endtrans %}</p>
+    </div>
+    {{ form.wrapper.dates_and_documents_fieldset.dispute_type }}
+    <div class="dispute-info hidden" data-dispute-info="dispute_type">
+      <p>{% trans %}This is based on your selection when you began this form, and is not editable here.{% endtrans %}</p>
+    </div>
+    {{ form.wrapper.dates_and_documents_fieldset.dispute_issue }}
+    <div class="dispute-info hidden" data-dispute-info="dispute_issue">
+      <p>{% trans %}Only one Dispute Issue may be selected per dispute.{% endtrans %}</p>
+    </div>
+    {{ form.wrapper.dates_and_documents_fieldset.additional_supporting_documents_title }}
+    {{ form.wrapper.dates_and_documents_fieldset.additional_supporting_documents }}
+    {{ form.wrapper.dates_and_documents_fieldset.actions }}
+  </fieldset>
+{{ form.wrapper.dates_and_documents_fieldset['#suffix']|raw }}

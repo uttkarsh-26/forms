@@ -1,0 +1,35 @@
+
+{% set step_id = form.wrapper['#progress_bar_details'].step_id %}
+{% set total_steps = form.wrapper['#progress_bar_details'].total_steps %}
+
+
+<div class="progress-bar">
+
+  {% for i in range(1, total_steps) %}
+
+    {% set step_state = form.wrapper.actions.step[i]['#step-state'] %}
+    {% if step_state == 1 %}
+      {% set class = 'empty' %}
+    {% endif %}
+    {% if step_state == 2 %}
+      {% set class = 'incomplete' %}
+    {% endif %}
+    {% if step_state == 3 %}
+      {% set class = 'complete' %}
+    {% endif %}
+    {# Active state overrides all others.#}
+    {% if step_id == i %}
+      {% set class = 'active' %}
+    {% endif %}
+    <div class="{{ class }}"> {{ form.wrapper.actions.step[i] }}</div>
+
+  {% endfor %}
+
+</div>
+
+<style>
+  .incomplete .m-input-submit {background-color:red;}
+  .empty .m-input-submit {background-color:grey;}
+  .active .m-input-submit {background-color: teal}
+  .complete .m-input-submit {background-color:green}
+</style>

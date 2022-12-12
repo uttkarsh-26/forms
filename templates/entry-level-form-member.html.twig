@@ -1,0 +1,56 @@
+<form id="{{ form['#id']}}" method="{{ form['#method'] }}">
+
+{{ form.contacted_wpr }}
+
+<div class="dispute-info hidden" data-dispute-info="contacted_wpr">
+  <h2>{% trans %}Workplace Representatives:{% endtrans %}</h2>
+  <ul>
+    <li>{% trans %}are trained by AMAPCEO to confidentially help you protect your workplace rights{% endtrans %}</li>
+    <li>{% trans %}can help you understand your rights and obligations in the workplace{% endtrans %}</li>
+    <li>{% trans %}provide representation in informal meetings with your manager{% endtrans %}</li>
+  </ul>
+  <p>{% trans %}The right to workplace representation is protected by your Collective Agreement.{% endtrans %}</p>
+</div>
+
+{{ form.contact_wpr_message }}
+{{ form.wpr }}
+{{ form.involve_benefits }}
+
+<div class="dispute-info hidden" data-dispute-info="involve_benefits">
+  <h2>{% trans %}Benefits, surplussing, or job security issues:{% endtrans %}</h2>
+  <ul>
+    <li>{% trans %}If your issue affects your benefits or job security, or if you have been surplussed, it will require a different process to resolve.{% endtrans %}</li>
+    <li>{% trans %}Please alert your Workplace Representative that you have either an insured benefits or job security (surplussing or redeployment) issue. They will consult appropriate AMAPCEO staff.{% endtrans %}</li>
+  </ul>
+</div>
+
+{{ form.involve_benefits_message }}
+
+
+{{ form.individual_group }}
+
+<div class="dispute-info hidden" data-dispute-info="individual_group">
+  <h2>{% trans %}Apart from yourself, are any other AMAPCEO members affected by this issue?{% endtrans %}</h2>
+  <ul>
+    <li>{% trans %}When a workplace issue affects only you then it is called an Individual Dispute. If this is the case, select no.{% endtrans %}</li>
+    <li>{% trans %}When two or more AMAPCEO members are negatively affected by a workplace issue, then this is a called a Group Dispute. If this is the case, select yes.{% endtrans %}</li>
+  </ul>
+  <p>{% trans %}If your issue involves allegations against another AMAPCEO member (ie: harassment) this is not a Group Dispute.{% endtrans %}</p>
+</div>
+
+{{ form.dispute_type }}
+
+<div class="dispute-info hidden" data-dispute-info="dispute_type">
+  <h2>{% trans %}Classification issues{% endtrans %}</h2>
+  <ul>
+    <li>{% trans %}If you believe that your job description is outdated or doesn’t truly reflect the work you do, or that another extremely similar job is rated higher, you may have a classification issue.{% endtrans %}</li>
+    <li>{% trans %}Have your job classification information (existing and proposed classifications, job descriptions, and rationales) available.{% endtrans %}</li>
+  </ul>
+</div>
+
+{{ form.form_build_id }}
+{{ form.form_token }}
+{{ form.form_id }}
+
+{{ form.actions }}
+</form>
